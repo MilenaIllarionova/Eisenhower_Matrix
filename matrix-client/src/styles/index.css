@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html,
+  body,
+  #root {
+    height: 100%;
+    background: #1f2326;
+    color: #e8edef;
+    font-family: Inter, system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  body {
+    margin: 0;
+  }
+}
+
+@layer components {
+  .input-line {
+    @apply w-full bg-transparent border-0 border-b border-white/20 px-2 py-2 text-sm
+           text-white placeholder-white/40 focus:outline-none focus:border-accent transition-colors;
+  }
+
+  .input-pill {
+    @apply w-full bg-white text-bg rounded-full px-4 py-2.5 text-sm
+           placeholder:text-bg/40 outline-none border border-transparent focus:border-accent transition-colors;
+  }
+
+  .textarea-box {
+    @apply w-full bg-white text-bg rounded-2xl px-4 py-3 text-sm resize-none
+           placeholder:text-bg/40 outline-none border border-transparent focus:border-accent transition-colors;
+  }
+
+  .select-pill {
+    @apply w-full bg-white text-bg rounded-full px-4 py-2.5 text-sm
+           outline-none appearance-none cursor-pointer focus:ring-2 focus:ring-accent/40 transition;
+  }
+
+  .btn-accent {
+    @apply inline-flex items-center justify-center rounded-full bg-accent text-bg
+           font-semibold text-sm px-6 py-2.5 shadow hover:bg-accent-dark transition;
+  }
+
+  .btn-accent-lg {
+    @apply inline-flex items-center justify-center rounded-2xl bg-accent text-bg
+           font-bold text-base px-8 py-3 shadow hover:bg-accent-dark transition;
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center justify-center rounded-2xl bg-bg-card text-white
+           font-bold text-base px-8 py-3 hover:bg-bg-panel transition;
+  }
+
+  .panel {
+    @apply rounded-2xl bg-bg-panel p-5;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar {
+    width: 6px;
+  }
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 4px;
+  }
+
+  .slide-indicator {
+    @apply absolute rounded-full bg-white shadow-sm transition-all duration-300 ease-out;
+  }
+}
