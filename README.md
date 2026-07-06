@@ -97,12 +97,3 @@ npm run dev                # http://localhost:5173 (проксирует /api и
 ```
 
 Требуется работающий MongoDB (локально через `mongod` или MongoDB Atlas).
-
-## Соответствие плану ВКР
-
-- **2.1 Технологический стек** — без отклонений (Vite+React+TS+Tailwind+Zustand+dnd-kit ↔ Node+Express+TS+Socket.IO+JWT ↔ MongoDB+Mongoose).
-- **2.2 Архитектура** — SPA + REST + WebSocket; явная ролевая модель доски (admin/member/viewer) реализована через `ProjectMember`.
-- **2.4 UI/UX** — компонентная система, тёмная тема, адаптивный grid (desktop + tablet), анимации переключения (язычок) на табах и в сайдбаре.
-- **3.1 Серверная часть** — модели, REST API, JWT, Socket.IO; history изменений в `task.history[]`; workflow review/done с уведомлениями.
-- **3.2 Клиентская часть** — pages/components/services/store, drag-and-drop, все четыре ключевых экрана + Profile + модалки (доска, задача, исполнитель, друзья).
-- **3.3 Тестирование** — рекомендуемый набор инструментов: Jest + Supertest (бэк), React Testing Library + Playwright (фронт).
